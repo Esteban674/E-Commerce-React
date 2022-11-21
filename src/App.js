@@ -1,14 +1,15 @@
 import './App.css';
-
 import React from 'react'
-import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import ItemListContainer from './components/ItemListContainer';
+import NavBar from './components/NavBar';
 
 const App = () => {
   return (
     <div className="container">
-      <Header/>
+      <NavBar/>
+      <ItemListContainer greeting={"Bienvenidos a E-Commerce!"}/>
       <Main/>
       <Footer/>
     </div>
