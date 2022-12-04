@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { customFetch } from '../utils/customFetch'
+import { customFetch } from '../utils/customFetch';
 import products from '../utils/products.json'
-import ItemList from './ItemList'
+import ItemDetail from './ItemDetail';
 import Loader from './Loader'
 
-const ItemListContainer = () => {
-
+const ItemDetailContainer = () => {
   const [listProducts, setListProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -22,10 +21,10 @@ const ItemListContainer = () => {
       {
         loading ?
         <Loader />:
-        <ItemList listProducts={listProducts}/>
+        <ItemDetail listProducts={listProducts}/>
       }  
     </div>
   )
 }
 
-export default ItemListContainer
+export default ItemDetailContainer
