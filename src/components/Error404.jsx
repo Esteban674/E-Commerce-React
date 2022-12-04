@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Error404 = () => {
   return (
@@ -10,7 +11,7 @@ const Error404 = () => {
                 <p className="lead">
                     La página que esta buscando no existe.
                   </p>
-                <a href="index.html" className="btn btn-primary">Go Home</a>
+                <Link to="/" className="btn btn-primary">Go Home</Link>
             </div>
         </div>
     </div>

@@ -12,11 +12,12 @@ const ItemListContainer = () => {
   const {category} = useParams();
 
   useEffect(() => {
+    setLoading(true);
     customFetch(products)
       .then(result => { 
-        setLoading(false);
         const products = ( category? result.filter(product => product.category === category): result);
         setListProducts(products);
+        setLoading(false);
       })
   }, [category]);
 
