@@ -5,14 +5,15 @@ import ItemDetail from './ItemDetail';
 import Loader from './Loader'
 
 const ItemDetailContainer = () => {
-  const [listProducts, setListProducts] = useState([]);
+  const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     customFetch(products)
       .then(result => { 
         setLoading(false);
-        setListProducts(result);
+        const product = result.find(item => item.id === 1);
+        setProduct(product);
       })
   }, []);
 
@@ -21,7 +22,7 @@ const ItemDetailContainer = () => {
       {
         loading ?
         <Loader />:
-        <ItemDetail listProducts={listProducts}/>
+        <ItemDetail product={product}/>
       }  
     </div>
   )
