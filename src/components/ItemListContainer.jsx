@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { customFetch } from '../utils/customFetch'
 import products from '../utils/products.json'
 import ItemList from './ItemList'
@@ -8,14 +9,16 @@ const ItemListContainer = () => {
 
   const [listProducts, setListProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const {category} = useParams();
 
   useEffect(() => {
     customFetch(products)
       .then(result => { 
         setLoading(false);
-        setListProducts(result);
+        const products = ( category? result.filter(product => product.category === category): result);
+        setListProducts(products);
       })
-  }, []);
+  }, [category]);
 
   return (
     <div className="container">
