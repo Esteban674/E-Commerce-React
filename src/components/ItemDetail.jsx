@@ -1,18 +1,18 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ItemCount from './ItemCount'
 import { CartContext } from './context/CartContext';
 
 const ItemDetail = ({product}) => {
-  const {saludar} = useContext(CartContext);
+  const {addItem} = useContext(CartContext);
   const [productStock, setProductStock] = useState(0);
 
   const onAdd = (quantity) => {
     setProductStock(productStock - quantity);
+    addItem(product, quantity);
   }
 
   useEffect(() => {
     setProductStock(product.stock)
-   
   }, [product])
   
 
