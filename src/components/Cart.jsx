@@ -12,6 +12,7 @@ const Cart = () => {
         <div className="row my-4">
           <div className="col-md-12 text-center">
             <div className="alert alert-danger" role="alert">No se encontraron productos en el carrito</div>
+            <Link to={"/"} className="btn btn-primary">Volver al Home</Link>
           </div>
         </div>
       </div>
