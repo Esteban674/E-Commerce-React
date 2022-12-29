@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const {cart, cartTotal, removeItem, clear, precioTotal} = useContext(CartContext);
-  console.log(cart);
+
   if(cartTotal() === 0) {
     return (
       <div className="container">
@@ -55,7 +55,7 @@ const Cart = () => {
                   <td></td>
                   <td className="text-end"><b>Total a Pagar</b></td>
                   <td className="text-center"><b>$ {precioTotal()}</b></td>
-                  <td className="text-end"><button className="btn btn-primary">Finalizar Compra</button></td>
+                  <td className="text-end"><Link to="/checkout" className="btn btn-primary">Finalizar Compra</Link></td>
                 </tr>
             </tbody>
           </table>
