@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "code": 1,
     "name": "Samsung Galaxy S22 Ultra 5G 256GB",
     "category": "smartphones",
     "price": 365999,
@@ -38,7 +38,7 @@
     }
   },
   {
-    "id": 2,
+    "code": 2,
     "name": "Motorola Edge 30 Fusion 5G 256GB",
     "category": "smartphones",
     "price": 199999,
@@ -76,7 +76,7 @@
     }
   },
   {
-    "id": 3,
+    "code": 3,
     "name": "Samsung Galaxy S21 Fan Edition 5G 128GB",
     "category": "smartphones",
     "price": 194999,
@@ -114,7 +114,7 @@
     }
   },
   {
-    "id": 4,
+    "code": 4,
     "name": "Moto G200 5G",
     "category": "smartphones",
     "price": 116799,
@@ -152,7 +152,7 @@
     }
   },
   {
-    "id": 5,
+    "code": 5,
     "name": "Samsung Galaxy Tab S8 Plus WiFi",
     "category": "tablets",
     "price": 339999,
@@ -190,7 +190,7 @@
     }
   },
   {
-    "id": 6,
+    "code": 6,
     "name": "Lenovo Yoga Tab 13 WiFi 128GB",
     "category": "tablets",
     "price": 142999,
@@ -228,7 +228,7 @@
     }
   },
   {
-    "id": 7,
+    "code": 7,
     "name": "Samsung Galaxy Tab S6 Lite WiFi",
     "category": "tablets",
     "price": 117999,
@@ -266,7 +266,7 @@
     }
   },
   {
-    "id": 8,
+    "code": 8,
     "name": "Lenovo Tab P11 WiFi 128GB con Teclado",
     "category": "tablets",
     "price": 86999,
@@ -304,7 +304,7 @@
     }
   },
   {
-    "id": 9,
+    "code": 9,
     "name": "Samsung Galaxy A13 128GB",
     "category": "smartphones",
     "price": 54399,
@@ -342,7 +342,7 @@
     }
   },
   {
-    "id": 10,
+    "code": 10,
     "name": "Moto E32 64GB",
     "category": "smartphones",
     "price": 43999,
@@ -380,7 +380,7 @@
     }
   },
   {
-    "id": 11,
+    "code": 11,
     "name": "Moto G52",
     "category": "smartphones",
     "price": 71999,
@@ -418,7 +418,7 @@
     }
   },
   {
-    "id": 12,
+    "code": 12,
     "name": "Samsung Galaxy A53 5G",
     "category": "smartphones",
     "price": 126899,
@@ -456,7 +456,7 @@
     }
   },
   {
-    "id": 13,
+    "code": 13,
     "name": "Lenovo Tab M8 WiFi con Estación de Carga",
     "category": "tablets",
     "price": 39199,
@@ -494,7 +494,7 @@
     }
   },
   {
-    "id": 14,
+    "code": 14,
     "name": "Lenovo Smart Tab Yoga WiFi",
     "category": "tablets",
     "price": 51999,
@@ -532,7 +532,7 @@
     }
   },
   {
-    "id": 15,
+    "code": 15,
     "name": "Samsung Galaxy Tab S7 FE WiFi",
     "category": "tablets",
     "price": 199999,
@@ -570,7 +570,7 @@
     }
   },
   {
-    "id": 16,
+    "code": 16,
     "name": "Samsung Galaxy Tab A8 WiFi",
     "category": "tablets",
     "price": 73099,
