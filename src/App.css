@@ -1,3 +1,19 @@
+html, body{
+  margin: 0px;
+  padding: 0px;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.encabezado{
+  height: 75px;
+}
+
+.main{
+  height: 100%;
+}
+
 .logo-Nav-Bar{
   width: 80px;
   margin: 0;
@@ -20,6 +36,14 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 16px;
 }
 
+/*Card Detail*/
+.img-principal{
+  max-height: 650px;
+}
+
+.img-secundaria{
+  cursor: pointer;
+}
 
 /*footer*/
 footer{
