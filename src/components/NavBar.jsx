@@ -9,7 +9,7 @@ const NavBar = () => {
         <div className="col-md-6">
           <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
-              <NavLink className="navbar-brand" to="/"><img className="logo-Nav-Bar" src="/images/e-commerce-logo.png" alt="Logo-E-Commerce" /></NavLink>
+              <NavLink className="navbar-brand" to="/"><img className="logo-Nav-Bar" src="/images/logoshop.png" alt="Logo-E-Commerce" /></NavLink>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>

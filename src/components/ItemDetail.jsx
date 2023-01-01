@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import ItemCount from './ItemCount'
 import { CartContext } from './context/CartContext';
+import ItemSpecs from './ItemSpecs';
 
 const ItemDetail = ({product}) => {
   const {addItem} = useContext(CartContext);
@@ -58,6 +59,9 @@ const ItemDetail = ({product}) => {
           <h5>${product.price}</h5>
           <ItemCount initial={product.initial} stock={product.stock} onAdd={onAdd}/>
         </div>
+      </div>
+      <div className="row">
+        <ItemSpecs product={product}/>
       </div>
     </div>
   )

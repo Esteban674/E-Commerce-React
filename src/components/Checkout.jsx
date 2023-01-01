@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext } from 'react'
 import { CartContext } from './context/CartContext'
 import { useState } from 'react';
-import { addDoc, collection, getFirestore } from 'firebase/firestore';
+import { doc, addDoc, collection, getFirestore, getDoc, updateDoc} from 'firebase/firestore';
 import { Link } from 'react-router-dom';
 
 const Checkout = () => {
@@ -25,8 +25,17 @@ const Checkout = () => {
     const orderCollection = collection(db, "orders");
     addDoc(orderCollection, order).then(({id}) => {
       setOrderId(id);
-      clear();
     });
+
+    cart.forEach(product => {
+      let registro = doc(db, 'products', product.id)
+      getDoc(registro).then((reg) => {
+        if(reg.exists()){
+          updateDoc(registro, {stock: (reg.data().stock - product.quantity) })
+        }
+      })
+    })
+    clear();
   }
 
   return (
