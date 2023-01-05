@@ -42,7 +42,7 @@ const ItemDetail = ({product}) => {
   
 
   return (
-    <div className="container text-center">
+    <div className="text-center">
       <div className="row justify-content-center">
         <div className="col-md-5 align-self-center p-3">
           {frontImg && <img src={product.image.front} alt={product.name} className="img-fluid img-principal"/>}

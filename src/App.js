@@ -12,7 +12,6 @@ import Checkout from './components/Checkout';
 
 const App = () => {
   return (
-    <div className="container">
       <CartContextProvider>
       <BrowserRouter>
       <NavBar/>
@@ -27,7 +26,6 @@ const App = () => {
       <Footer/>
       </BrowserRouter>
       </CartContextProvider>
-    </div>
   )
 }
 

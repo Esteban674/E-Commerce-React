@@ -8,7 +8,7 @@ const Cart = () => {
 
   if(cartTotal() === 0) {
     return (
-      <div className="container">
+      <div className="container carritoVacio">
         <div className="row my-4">
           <div className="col-md-12 text-center">
             <div className="alert alert-danger" role="alert">No se encontraron productos en el carrito</div>
@@ -20,7 +20,7 @@ const Cart = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container cartContainer">
       <div className="row mt-5 justify-content-center">
         <div className="col-md-10">
           <table className="table">
@@ -46,7 +46,7 @@ const Cart = () => {
                     <td className="align-middle text-center">{product.quantity}</td>
                     <td className="align-middle text-center">$ {product.quantity * product.price}</td>
                     <td className="align-middle text-end"><Link onClick={() => removeItem(product.id)} title="Eliminar Producto">
-                      <img src="/images/trash3.svg" alt="Trash" width="28px"/>
+                      <i className="bi bi-trash3 cestoIcon"></i>
                     </Link></td>
                   </tr>
                 ))}
@@ -55,7 +55,13 @@ const Cart = () => {
                   <td></td>
                   <td className="text-end"><b>Total a Pagar</b></td>
                   <td className="text-center"><b>$ {precioTotal()}</b></td>
-                  <td className="text-end"><Link to="/checkout" className="btn btn-primary">Finalizar Compra</Link></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td className="text-center py-3" colSpan="2"><Link to="/checkout" className="btn btn-primary">Finalizar Compra</Link></td>
+                  <td></td>
+                  <td></td>
                 </tr>
             </tbody>
           </table>

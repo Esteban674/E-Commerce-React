@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { CartContext } from './context/CartContext'
 import { useState } from 'react';
 import { doc, addDoc, collection, getFirestore, getDoc, updateDoc} from 'firebase/firestore';
-import { Link } from 'react-router-dom';
+import NumeroOrden from './NumeroOrden';
 
 const Checkout = () => {
   const {cart, clear, precioTotal} = useContext(CartContext);
@@ -39,10 +39,10 @@ const Checkout = () => {
   }
 
   return (
-    <div className="continer">
+    <div className="container checkout">
       { !orderId? 
       <div className="row my-5">
-        <div className="col-md-6 my-2 pe-5 ps-5">
+        <div className="col-md-6 my-2 pe-5 ps-5 inputs">
           <form>
             <div className="mb-3">
               <label className="form-label">Nombre</label>
@@ -92,13 +92,8 @@ const Checkout = () => {
           </table>
         </div>
       </div>
-      :
-      <div className="row my-4 justify-content-center">
-          <div className="col-md-12 align-middle text-center m-3">
-            {orderId && <div className="alert alert-success" role="alert">Orden generada: <b>{orderId}</b></div>}
-          </div>
-          <Link to="/" className="col-md-2 btn btn-primary align-self-center text-center m-3 mb-2">Go Home</Link>
-      </div>}
+      : <NumeroOrden orderId= {orderId} />
+      }
     </div>
   )
 }

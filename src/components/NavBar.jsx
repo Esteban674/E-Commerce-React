@@ -4,12 +4,12 @@ import CartWidget from './CartWidget'
 
 const NavBar = () => {
   return (
-    <div className="container mb-4">
-      <div className="row">
+    <div className="mb-4 nav-bar">
+      <div className="row m-0">
         <div className="col-md-6">
-          <nav className="navbar navbar-expand-lg">
+          <nav className="navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
-              <NavLink className="navbar-brand" to="/"><img className="logo-Nav-Bar" src="/images/logoshop.png" alt="Logo-E-Commerce" /></NavLink>
+              <NavLink className="navbar-brand" to="/"><img className="logo-Nav-Bar" src="/images/shopLogo.png" alt="Logo-E-Commerce" /></NavLink>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
@@ -24,7 +24,7 @@ const NavBar = () => {
             </div>
           </nav>
         </div>
-        <div className="col-md-6 d-flex align-items-center justify-content-end">
+        <div className="col-md-6 d-flex align-items-center justify-content-end pe-5">
           <CartWidget />
         </div>
       </div>

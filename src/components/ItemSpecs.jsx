@@ -10,16 +10,16 @@ const ItemSpecs = ({product}) => {
         <h4 className="mt-5 mb-2">Especificaciones técnicas - {product.name} </h4>
         <div className="col">
           <div className="row py-2 mt-5 specs">
-            <div className="col-2 offset-md-2 text-end">
+            <div className="col-2 offset-md-1 text-end container-icono-specs">
               <img src="/images/camera.png" alt="camera" className="icono-specs"/>
             </div>
-            <div className="col-8 text-start m-0 p-0 ps-1">
+            <div className="col-8 text-start m-0 p-0 ps-1 specsLeft">
               <h5 className="m-0 p-0 pt-2">Cámara principal</h5>
               <p className="m-0 p-0">{specs.camaraPrincipal}</p>
             </div>
           </div>
           <div className="row py-2 specs">
-            <div className="col-2 offset-md-2 text-end">
+            <div className="col-2 offset-md-1 text-end container-icono-specs">
               <img src="/images/screen.png" alt="screen" className="icono-specs"/>
             </div>
             <div className="col-8 text-start m-0 p-0 ps-1">
@@ -28,7 +28,7 @@ const ItemSpecs = ({product}) => {
             </div>
           </div>
           <div className="row py-2 specs">
-            <div className="col-2 offset-md-2 text-end">
+            <div className="col-2 offset-md-1 text-end container-icono-specs">
               <img src="/images/processor.png" alt="processor" className="icono-specs"/>
             </div>
             <div className="col-8 text-start m-0 p-0 ps-1">
@@ -37,7 +37,7 @@ const ItemSpecs = ({product}) => {
             </div>
           </div>
           <div className="row py-2 specs">
-            <div className="col-2 offset-md-2 text-end">
+            <div className="col-2 offset-md-1 text-end container-icono-specs">
               <img src="/images/memory.png" alt="memory" className="icono-specs"/>
             </div>
             <div className="col-8 text-start m-0 p-0 ps-1">
@@ -46,7 +46,7 @@ const ItemSpecs = ({product}) => {
             </div>
           </div>
           <div className="row py-2 specs">
-            <div className="col-2 offset-md-2 text-end">
+            <div className="col-2 offset-md-1 text-end container-icono-specs">
               <img src="/images/battery.png" alt="battery" className="icono-specs"/>
             </div>
             <div className="col-8 text-start m-0 p-0 ps-1">
@@ -55,7 +55,7 @@ const ItemSpecs = ({product}) => {
             </div>
           </div>
           <div className="row py-2 specs">
-            <div className="col-2 offset-md-2 text-end">
+            <div className="col-2 offset-md-1 text-end container-icono-specs">
               <img src="/images/dimensions.png" alt="dimensions" className="icono-specs"/>
             </div>
             <div className="col-8 text-start m-0 p-0 ps-1">
