@@ -1,4 +1,4 @@
-# E-Commerce desarrollado en React App
+# E-Commerce desarrollado en React
 
 Este sitio e-commerce es es proyecto final para el curso de React de CoderHouse.
 
