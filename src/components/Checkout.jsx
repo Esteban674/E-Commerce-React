@@ -8,7 +8,7 @@ import NumeroOrden from './NumeroOrden';
 
 const Checkout = () => {
   const {cart, clear, precioTotal} = useContext(CartContext);
-  let name, lastName, phone, email = '';
+  
   const [orderId, setOrderId] = useState("");
 
   const {register, handleSubmit, formState: { errors }} = useForm({mode: "onBlur" });
@@ -42,33 +42,6 @@ const Checkout = () => {
     }
   };
 
-
-  const generarOrden = () => {
-    const fecha = new Date();
-    const order = {
-      buyer: {name: name, lastName: lastName, phone: phone, email: email},
-      items: cart.map(item => ({id: item.id, title: item.name, price: item.price})),
-      total: precioTotal(),
-      orderDate: `${fecha.getFullYear()}-${fecha.getMonth() + 1}-${fecha.getDate()}"  "${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}`
-    }
-
-    const db = getFirestore();
-    const orderCollection = collection(db, "orders");
-    addDoc(orderCollection, order).then(({id}) => {
-      setOrderId(id);
-    });
-
-    cart.forEach(product => {
-      let registro = doc(db, 'products', product.id)
-      getDoc(registro).then((reg) => {
-        if(reg.exists()){
-          updateDoc(registro, {stock: (reg.data().stock - product.quantity) })
-        }
-      })
-    })
-    clear();
-  }
-
   return (
     <div className="container checkout">
       { !orderId? 
@@ -77,8 +50,6 @@ const Checkout = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
               <label className="form-label">Nombre</label>
-              {/* <input type="text" className="form-control" id="name" placeholder="Ingrese su nombre"
-              onInput={(e) => setName(e.target.value)}/> */}
               <input type="text" className="form-control" id="name" placeholder="Ingrese su nombre"
               {...register("name", {required: true, minLength: 3, maxLength: 20, pattern: /^[A-Za-z]+$/i })}/>
               {errors?.name?.type === "required" && <p className="text-danger">El nombre es requerido</p> }

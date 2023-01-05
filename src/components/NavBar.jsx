@@ -18,7 +18,6 @@ const NavBar = () => {
                   <NavLink className="nav-link" aria-current="page" to="/">Home</NavLink>
                   <NavLink className="nav-link" to="/category/smartphones">Smartphones</NavLink>
                   <NavLink className="nav-link" to="/category/tablets">Tablets</NavLink>
-                  {/* <NavLink className="nav-link" to="/locales">Locales</NavLink> */}
                 </div>
               </div>
             </div>
