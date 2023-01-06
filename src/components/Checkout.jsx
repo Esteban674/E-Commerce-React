@@ -43,7 +43,7 @@ const Checkout = () => {
   };
 
   return (
-    <div className="container checkout">
+    <div className="container checkout animate__animated animate__fadeIn">
       { !orderId? 
       <div className="row my-5">
         <div className="col-md-6 my-2 pe-5 ps-5 inputs">

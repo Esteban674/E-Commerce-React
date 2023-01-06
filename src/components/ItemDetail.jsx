@@ -42,9 +42,9 @@ const ItemDetail = ({product}) => {
   
 
   return (
-    <div className="text-center">
+    <div className="text-center animate__animated animate__fadeIn">
       <div className="row justify-content-center">
-        <div className="col-md-5 align-self-center p-3">
+        <div className="col-md-5 align-self-center p-3 animate__animated animate__fadeIn">
           {frontImg && <img src={product.image.front} alt={product.name} className="img-fluid img-principal"/>}
           {rearImg && <img src={product.image.rear} alt={product.name} className="img-fluid img-principal"/>}
           {sideImg && <img src={product.image.side} alt={product.name} className="img-fluid img-principal"/>}

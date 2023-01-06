@@ -6,7 +6,7 @@ const Item = ({product}) => {
   const {image, name, price} = product;
 
   return (
-    <div className="card d-flex justify-content-center m-2" style={{width: '18rem'}}>
+    <div className="card d-flex justify-content-center m-2 animate__animated animate__fadeIn" style={{width: '18rem'}}>
       <Link to={"/item/" + product.id} className="text-center">
         <img src={image.card} className="card-img-top p-4 align-self-center" style={{width: '13rem'}} alt={name}/>
       </Link> 

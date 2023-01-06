@@ -20,7 +20,7 @@ const Cart = () => {
   }
 
   return (
-    <div className="container cartContainer">
+    <div className="container cartContainer animate__animated animate__fadeIn">
       <div className="row mt-5 justify-content-center">
         <div className="col-md-10">
           <table className="table">
